@@ -1,0 +1,13 @@
+var ms = new GlideRecord('incident');
+ms.addQuery('state', 6);
+ms.query();
+while (ms.next()) {
+    var orgTime = new GlideDateTime('2025-01-02');
+    var today = new GlideDateTime();
+    var diff = new GlideDateTime.subtract(orgTime, today).getDayPart();
+
+    if (diff >= 5) {
+        ms.state = 7;
+        ms.update();
+    }
+}
