@@ -1,0 +1,6 @@
+var ms = new GlideDateTime().getDayOfWeekLocalTime();
+if(day == 6 || day == 7){
+	answer = false;
+} else {
+	answer = true;
+}
