@@ -1,0 +1,11 @@
+var currentDate = new GlideDateTime();
+var currentDayOfWeek = currentDate.getDayOfWeekLocalTime();
+gs.print(currentDate);
+gs.print(currentDayOfWeek);
+
+if (currentDayOfWeek != 6) {
+    gs.print('Today is not Saturday. Generating the report...');
+    generateReport();
+} else {
+    gs.print('Today is Saturday. No report generation.');
+}
