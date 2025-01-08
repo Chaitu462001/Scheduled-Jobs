@@ -1,0 +1,12 @@
+ var today =  new GlideDateTime('25-04-2023').getDate();
+ var endOfMonth = new GlideDateTime(gs.endOfThisMonth());
+endOfMonth.addDaysLocalTime(-1);
+var lastDay = endOfMonth.getDate();
+ gs.print(today);
+ gs.print(lastDay);
+
+ if(today == lastDay){
+	gs.print('yes today is the last day');
+ } else {
+	gs.print('Today is not the last day');
+ }
