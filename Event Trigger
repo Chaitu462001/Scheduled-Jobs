@@ -1,0 +1,6 @@
+var ms = new GlideRecord("sys_user_group");
+ms.addQuery('manager.active',false);
+ms.query();
+while(ms.next()){
+	gs.eventQueue('manager.inactive',ms,'suryachaitanya46@gmail.com');
+}
