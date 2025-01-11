@@ -1,3 +1,13 @@
+#1 - Create an event 
+
+#2 - Craete a Notification
+	* add name
+	* add table name
+	* set when to send & select the event name which you have created from the choice box
+	* in who will receive selection, select event parm1, if required parm 2
+	* add subject and message in the What it will contain scetion
+
+#3 - create a scheduled script execution and writre the script to query manager who is inactive.  
 var ms = new GlideRecord("sys_user_group");
 ms.addQuery('manager.active',false);
 ms.query();
